@@ -15,37 +15,67 @@
   <link rel="stylesheet" href="./university.css">
   <script type="module" src="./app.js"></script>
   <script type="module">
-  // Magic sparkles intro — "あなたの一歩を応援したい✨"
-  // WIZARDS spreads smiles; this playful moment echoes that.
+  // Magic wand intro — a wizard crosses the screen, casting sparkles
+  // Text: "あなたの一歩を応援したい" then fades out
   (function () {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) return;
     const overlay = document.createElement('div');
     overlay.className = 'magic-intro';
     overlay.setAttribute('aria-hidden', 'true');
-    overlay.innerHTML = '<span class="magic-intro-text">あなたの一歩を<br>応援したい ✨</span>';
+    overlay.innerHTML = '<span class="magic-intro-text">あなたの一歩を<br>応援したい</span>';
     document.body.prepend(overlay);
-    const sparkleCount = 48;
+
+    // Wizard element (simple SVG silhouette with wand)
+    const wizard = document.createElement('div');
+    wizard.className = 'magic-wizard';
+    wizard.innerHTML = '<svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M60 20 C40 20 30 40 30 60 L35 100 L50 140 L70 140 L85 100 L90 60 C90 40 80 20 60 20 Z" fill="#F4C44D" opacity="0.9"/><circle cx="60" cy="35" r="18" fill="#F4C44D"/><path d="M30 60 L10 50 L25 90 Z" fill="#F4C44D" opacity="0.7"/><path d="M90 60 L110 50 L95 90 Z" fill="#F4C44D" opacity="0.7"/><rect x="95" y="45" width="6" height="50" rx="3" fill="#F4C44D" transform="rotate(30 98 70)"/></svg>';
+    overlay.appendChild(wizard);
+
+    // Sparkle trail behind the wand tip
+    const trail = [];
     const glyphs = ['✦', '✧', '⋆', '＋', '·'];
-    for (let i = 0; i < sparkleCount; i++) {
+    for (let i = 0; i < 20; i++) {
       const s = document.createElement('span');
       s.className = 'magic-sparkle';
       s.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
-      const size = 10 + Math.random() * 22;
-      s.style.setProperty('--s', size + 'px');
-      s.style.setProperty('--x', (Math.random() * 100) + '%');
-      s.style.setProperty('--y', (Math.random() * 100) + '%');
-      s.style.setProperty('--d', (0.6 + Math.random() * 1.4) + 's');
-      s.style.setProperty('--dl', (Math.random() * 0.5) + 's');
-      s.style.setProperty('--r', (Math.random() * 360) + 'deg');
-      s.style.setProperty('--o', (0.5 + Math.random() * 0.5));
+      s.style.setProperty('--s', (8 + Math.random() * 18) + 'px');
       overlay.appendChild(s);
+      trail.push(s);
     }
-    const sweep = document.createElement('span');
-    sweep.className = 'magic-sweep';
-    overlay.appendChild(sweep);
-    setTimeout(() => { overlay.classList.add('done'); }, 2200);
-    setTimeout(() => { overlay.remove(); }, 3000);
+
+    // Animate wizard across the screen left→right, leaving sparkles
+    const duration = 2800;
+    const start = performance.now();
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      // ease-in-out
+      const e = t < 0.5 ? 2*t*t : -1 + (4-2*t)*t;
+      const x = -100 + e * (window.innerWidth + 200);
+      const y = window.innerHeight * (0.4 + 0.05 * Math.sin(t * Math.PI * 2));
+      wizard.style.transform = `translate(${x}px, ${y}px)`;
+
+      // Emit sparkles near wand tip (top-right of wizard)
+      if (t < 0.85 && Math.random() < 0.5) {
+        const s = trail[Math.floor(Math.random() * trail.length)];
+        s.style.setProperty('--x', (x + 80 + (Math.random()*40-20)) + 'px');
+        s.style.setProperty('--y', (y - 20 + (Math.random()*40-20)) + 'px');
+        s.style.setProperty('--d', (0.8 + Math.random()*0.8) + 's');
+        s.style.setProperty('--dl', '0s');
+        s.style.setProperty('--r', (Math.random()*360) + 'deg');
+        s.style.setProperty('--o', (0.6 + Math.random()*0.4));
+        s.style.animation = 'none';
+        void s.offsetWidth; // reflow to restart animation
+        s.style.animation = '';
+      }
+      if (t < 1) requestAnimationFrame(frame);
+      else {
+        wizard.style.opacity = '0';
+        setTimeout(() => { overlay.classList.add('done'); }, 400);
+        setTimeout(() => { overlay.remove(); }, 1400);
+      }
+    }
+    requestAnimationFrame(frame);
   })();
   </script>
   <script type="module">

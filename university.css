@@ -147,7 +147,7 @@ html[lang=ja] .start-banner h2{font-size:25px}
 }
 
 
-/* ===== Magic sparkles intro (WIZARDS' smile magic) ===== */
+/* ===== Magic wizard intro — a wizard crosses the screen, casting sparkles ===== */
 .magic-intro {
   position: fixed;
   inset: 0;
@@ -157,10 +157,9 @@ html[lang=ja] .start-banner h2{font-size:25px}
   justify-content: center;
   pointer-events: none;
   background: radial-gradient(ellipse at center, rgba(244,196,77,0.08) 0%, rgba(24,32,83,0.92) 70%);
-  animation: magic-fade 3s ease forwards;
 }
 .magic-intro.done {
-  animation: magic-fade-out 0.8s ease forwards;
+  animation: magic-fade-out 1s ease forwards;
 }
 .magic-intro-text {
   position: relative;
@@ -172,8 +171,29 @@ html[lang=ja] .start-banner h2{font-size:25px}
   letter-spacing: 0.05em;
   line-height: 1.5;
   text-shadow: 0 0 24px rgba(244,196,77,0.6), 0 0 48px rgba(244,196,77,0.3);
-  animation: magic-text-in 1.2s cubic-bezier(0.22,1,0.36,1) both, magic-text-glow 3s ease-in-out infinite alternate;
+  animation: magic-text-in 1.2s cubic-bezier(0.22,1,0.36,1) both, magic-text-glow 2.5s ease-in-out infinite alternate;
 }
+/* The wizard silhouette — moved by JS, so no CSS animation on transform */
+.magic-wizard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 160px;
+  z-index: 3;
+  filter: drop-shadow(0 0 18px rgba(244,196,77,0.7));
+  will-change: transform;
+}
+.magic-wizard svg {
+  width: 100%;
+  height: 100%;
+  animation: magic-wizard-bob 1.6s ease-in-out infinite alternate;
+}
+@keyframes magic-wizard-bob {
+  0%   { transform: translateY(0) rotate(-3deg); }
+  100% { transform: translateY(-10px) rotate(3deg); }
+}
+/* Sparkles left behind by the wand */
 .magic-sparkle {
   position: absolute;
   left: var(--x);
@@ -184,15 +204,6 @@ html[lang=ja] .start-banner h2{font-size:25px}
   transform: rotate(var(--r)) scale(0);
   text-shadow: 0 0 12px rgba(244,196,77,0.8);
   animation: magic-sparkle var(--d) ease-out var(--dl) both;
-}
-.magic-sweep {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(105deg, transparent 0%, rgba(244,196,77,0.12) 45%, rgba(255,255,255,0.18) 50%, rgba(244,196,77,0.12) 55%, transparent 100%);
-  animation: magic-sweep 2.4s ease-out 0.3s both;
 }
 @keyframes magic-sparkle {
   0%   { opacity: 0; transform: rotate(var(--r)) scale(0) translateY(0); }
@@ -206,92 +217,6 @@ html[lang=ja] .start-banner h2{font-size:25px}
 @keyframes magic-text-glow {
   0%   { text-shadow: 0 0 24px rgba(244,196,77,0.6), 0 0 48px rgba(244,196,77,0.3); }
   100% { text-shadow: 0 0 32px rgba(244,196,77,0.9), 0 0 64px rgba(244,196,77,0.5); }
-}
-@keyframes magic-sweep {
-  0%   { left: -100%; }
-  100% { left: 160%; }
-}
-@keyframes magic-fade {
-  0%   { opacity: 0; }
-  12%  { opacity: 1; }
-  75%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-@keyframes magic-fade-out {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-
-/* ===== Magic sparkles intro (WIZARDS' smile magic) ===== */
-.magic-intro {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, rgba(244,196,77,0.08) 0%, rgba(24,32,83,0.92) 70%);
-  animation: magic-fade 3s ease forwards;
-}
-.magic-intro.done {
-  animation: magic-fade-out 0.8s ease forwards;
-}
-.magic-intro-text {
-  position: relative;
-  z-index: 2;
-  color: #F4C44D;
-  font-size: clamp(1.4rem, 4vw, 2.6rem);
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
-  text-shadow: 0 0 24px rgba(244,196,77,0.6), 0 0 48px rgba(244,196,77,0.3);
-  animation: magic-text-in 1.2s cubic-bezier(0.22,1,0.36,1) both, magic-text-glow 3s ease-in-out infinite alternate;
-}
-.magic-sparkle {
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  font-size: var(--s);
-  color: #F4C44D;
-  opacity: 0;
-  transform: rotate(var(--r)) scale(0);
-  text-shadow: 0 0 12px rgba(244,196,77,0.8);
-  animation: magic-sparkle var(--d) ease-out var(--dl) both;
-}
-.magic-sweep {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(105deg, transparent 0%, rgba(244,196,77,0.12) 45%, rgba(255,255,255,0.18) 50%, rgba(244,196,77,0.12) 55%, transparent 100%);
-  animation: magic-sweep 2.4s ease-out 0.3s both;
-}
-@keyframes magic-sparkle {
-  0%   { opacity: 0; transform: rotate(var(--r)) scale(0) translateY(0); }
-  30%  { opacity: var(--o); transform: rotate(calc(var(--r) + 90deg)) scale(1) translateY(-8px); }
-  100% { opacity: 0; transform: rotate(calc(var(--r) + 270deg)) scale(0.2) translateY(-40px); }
-}
-@keyframes magic-text-in {
-  0%   { opacity: 0; transform: translateY(20px) scale(0.9); filter: blur(8px); }
-  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-}
-@keyframes magic-text-glow {
-  0%   { text-shadow: 0 0 24px rgba(244,196,77,0.6), 0 0 48px rgba(244,196,77,0.3); }
-  100% { text-shadow: 0 0 32px rgba(244,196,77,0.9), 0 0 64px rgba(244,196,77,0.5); }
-}
-@keyframes magic-sweep {
-  0%   { left: -100%; }
-  100% { left: 160%; }
-}
-@keyframes magic-fade {
-  0%   { opacity: 0; }
-  12%  { opacity: 1; }
-  75%  { opacity: 1; }
-  100% { opacity: 0; }
 }
 @keyframes magic-fade-out {
   0%   { opacity: 1; }

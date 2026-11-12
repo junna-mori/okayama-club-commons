@@ -1,0 +1,16 @@
+{
+  "name": "okayama-club-commons",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bilingual student-led club and shared-food guide for Okayama University students",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist",
+    "check": "node scripts/check.mjs",
+    "export-preview": "node scripts/export-preview.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

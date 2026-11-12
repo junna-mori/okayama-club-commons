@@ -1,0 +1,12 @@
+import { mkdir, cp, rm, readFile } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const out = resolve(root, 'dist');
+if (out !== resolve(root,'dist')) throw new Error('Unexpected build target');
+await rm(out, { recursive: true, force: true });
+await mkdir(out, { recursive: true });
+for (const name of ['index.html','styles.css','university.css','app.js','data.js','domain.js','assets','robots.txt']) await cp(resolve(root,name), resolve(out,name),{recursive:true});
+const html = await readFile(resolve(out,'index.html'),'utf8');
+if (!html.includes('COMMONS')) throw new Error('Missing entry point');
+console.log('Built static website in dist/ (no third-party dependencies).');

@@ -1,0 +1,125 @@
+/* University-guide visual direction. Shared colours are inherited from styles.css. */
+:root{--paper:#f4f6f8;--line:#d9dfe8;--radius:2px}
+html{scroll-padding-top:180px}
+h1,h2,h3{font-family:var(--sans)}
+h1{font-weight:650;letter-spacing:-.035em;line-height:1.25}
+h2{font-size:33px;font-weight:600;letter-spacing:-.025em;line-height:1.45}
+h3{font-weight:600}
+.eyebrow{font-size:10px;letter-spacing:.14em}
+.button{border-radius:1px;min-height:50px;font-size:13px;padding:12px 21px;gap:25px}
+.button.secondary{background:white}
+.text-link{font-size:13px}
+.section{padding-block:65px}
+.section-heading{align-items:center;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:30px}
+.section-heading h2{font-size:32px}
+.section-heading .eyebrow{margin-bottom:11px;color:var(--muted)}
+.section-heading>.text-link{margin:0}
+#site-header{height:auto;border-top:4px solid var(--navy);background:#fff;box-shadow:0 1px 4px #18205308}
+.utility-bar{height:31px;background:#f1f3f6;border-bottom:1px solid #e4e8ee}
+.utility-inner{display:flex;align-items:center;justify-content:space-between;height:100%;font-size:9px;letter-spacing:.08em;color:#4d576e}
+.utility-divider{margin-inline:10px;color:#a2aab6}
+.utility-bar .language-switch{height:100%;margin:0;font-size:9px;gap:8px;letter-spacing:.03em}
+.utility-bar .language-switch button{min-height:30px;padding:4px 3px;line-height:1.5}
+.utility-bar .language-switch button[aria-pressed=true]{text-underline-offset:4px}
+.masthead{display:flex;align-items:center;justify-content:space-between;min-height:91px;gap:30px}
+.university-brand{gap:17px;padding-block:12px}
+.brand-rule{width:5px;height:52px;background:var(--navy);border-bottom:12px solid var(--gold);flex-shrink:0}
+.brand-context{display:block;font:500 9px/1.7 var(--sans);letter-spacing:.12em;color:var(--muted);margin-bottom:2px}
+.university-brand strong{font:650 30px/1.3 var(--sans);letter-spacing:.015em;color:var(--navy)}
+.university-brand small{font:500 8px/1.5 var(--sans);letter-spacing:.18em;margin-top:5px;color:var(--muted)}
+.masthead-caption{border-left:1px solid var(--line);padding-left:25px;font-size:11px;line-height:1.8;letter-spacing:.03em;color:var(--muted)}
+.nav-band{border-top:1px solid var(--line);background:var(--navy)}
+#main-nav{display:flex;position:static;margin:0 auto;gap:0;height:48px;align-items:stretch;background:transparent;box-shadow:none}
+#main-nav a{display:flex;align-items:center;justify-content:center;flex:1;font-size:12px;font-weight:500;color:white;border-bottom:3px solid transparent;border-right:1px solid #ffffff1c;padding:10px 15px;white-space:nowrap;line-height:1.6}
+#main-nav a:first-child{border-left:1px solid #ffffff1c}
+#main-nav a[aria-current]{border-bottom-color:var(--gold);background:#ffffff0b}
+#main-nav a:hover{color:var(--gold);background:#ffffff12}
+.masthead .menu-button{display:none}
+.hero{background:#f0f3f7;border-bottom:1px solid var(--line)}
+.hero-grid{grid-template-columns:1fr 1.04fr;gap:48px;padding-block:42px 36px}
+.hero-copy{padding:0}
+.hero h1{font-size:clamp(37px,4.1vw,56px);font-weight:650;letter-spacing:-.045em;line-height:1.28}
+.hero .eyebrow{margin-bottom:20px;display:flex;align-items:center;gap:10px;color:var(--navy);font-size:9px}
+.hero .eyebrow:before{content:'';width:23px;height:3px;background:var(--gold);flex-shrink:0}
+.hero-intro{font-size:14px;margin-top:22px;line-height:1.95;max-width:490px}
+.hero .button-row{margin-top:25px}
+.hero-note{margin-top:19px;font-size:10px}
+.hero-art{padding:0}
+.hero-art img{height:354px;width:100%;object-fit:cover;object-position:center;border-radius:0}
+.hero-art figcaption{letter-spacing:.07em;font-size:8px;margin-top:9px;gap:10px;flex-wrap:wrap}
+.hero-art figcaption span:last-child{font-size:8px}
+.pathways{padding-block:18px;border-bottom:1px solid var(--line)}
+.pathways>a{padding-block:10px}
+.step-no{font:600 17px/1 var(--sans);color:#82702a}
+.pathways h2{font:600 14px/1.5 var(--sans)}
+.pathways p{font-size:11px}
+.club-card{border-radius:0;box-shadow:none}
+.club-card:hover{transform:none;box-shadow:0 4px 16px #18205310}
+.club-card-image{position:relative;margin:0;background:#e8edf3;border-bottom:1px solid var(--line)}
+.club-card-image img{width:100%;aspect-ratio:1.55;object-fit:cover;height:auto}
+.club-card-image figcaption{font-size:9px;line-height:1.6;padding:6px 11px;color:#5b6475;background:#f6f7f9;border-top:1px solid #e4e8ec;letter-spacing:.01em}
+.club-card-image .save-button{background:#ffffffed;border:1px solid #d8dee7;top:12px;right:12px;border-radius:2px;box-shadow:0 1px 4px #18205310}
+.club-card-image .save-button:hover{background:var(--gold)}
+.club-card-body{padding:21px 23px 18px}
+.club-card-body>.category-caption{display:block;font-size:9px;letter-spacing:.12em;color:#82702a;line-height:1.6;padding:0;margin-bottom:13px}
+.club-card h3{font:600 23px/1.4 var(--sans);letter-spacing:-.02em}
+.club-card-body>.card-subtitle{font-size:10px;margin-bottom:6px}
+.club-card-body>p:not(.card-subtitle){font-size:13px;line-height:1.9;margin-top:14px}
+.round-link{border-radius:0;width:34px;height:34px}
+.dining-feature{padding-block:60px}
+.dining-feature h2{font-family:var(--sans);font-size:43px;font-weight:500;line-height:1.3;letter-spacing:-.025em}
+.dining-feature h2 em{font-style:normal;font-weight:600}
+.dining-feature-copy>p{font-size:16px}
+.story-preview{gap:85px}
+.story-preview h2{font-size:36px;font-family:var(--sans);font-weight:600;line-height:1.4}
+.story-preview .lead{font-size:17px}
+.start-banner{border-left:5px solid var(--gold);border-radius:0;background:#f3f5f8;margin-bottom:65px}
+.start-banner h2{font-size:27px;font-family:var(--sans);font-weight:600}
+.page-head{background:linear-gradient(90deg,#f0f3f7,#f8f9fb);padding-block:43px 37px}
+.page-head .eyebrow{color:var(--muted);margin-bottom:16px}
+.page-head h1{font-size:45px;line-height:1.3;letter-spacing:-.025em;font-weight:600}
+.page-head p:not(.eyebrow){font-size:14px;margin-top:21px}
+.chip{border-radius:2px}
+.filter-row{gap:9px}
+.restaurant-card{grid-template-columns:1fr 1.55fr;border-radius:0}
+.restaurant-identity{padding:0;display:block;background:#f4f6f8}
+.restaurant-image{margin:0}
+.restaurant-image img{width:100%;height:auto;aspect-ratio:1.6;object-fit:cover}
+.restaurant-image figcaption{font-size:9px;line-height:1.7;color:var(--muted);background:#f7f8fa;padding:6px 16px;border-bottom:1px solid var(--line)}
+.restaurant-heading{padding:25px 28px 28px}
+.restaurant-heading .eyebrow{font-size:9px;line-height:1.8;letter-spacing:.07em}
+.restaurant-identity h2{font:600 24px/1.45 var(--sans);margin:12px 0 8px;overflow-wrap:normal}
+.restaurant-identity .card-subtitle{font-size:11px}
+.restaurant-content{padding:29px 32px}
+.restaurant-content>p{font-size:13px}
+.culture-section h2,.phrase-section h2{font-size:33px;font-family:var(--sans);font-weight:600;line-height:1.45}
+.culture-number{font:600 17px/1 var(--sans);color:#82702a}
+.guide-layout aside h2,.message-builder h2,.faq h2,.story-title h2{font:600 31px/1.45 var(--sans);letter-spacing:-.025em}
+.guide-steps li>span{font:600 20px/1.5 var(--sans);color:#82702a}
+.mission-band h2{font:500 38px/1.5 var(--sans);letter-spacing:-.025em}
+.about-principles span{font:600 18px/1 var(--sans)}
+.dialog-image{margin:0 0 24px;background:var(--paper)}
+.dialog-image img{width:100%;height:auto;aspect-ratio:1.8;object-fit:cover}
+.dialog-image figcaption{font-size:10px;line-height:1.7;padding:8px 12px;color:var(--muted);border-bottom:1px solid var(--line)}
+dialog{border-radius:2px}
+dialog h2{font:600 31px/1.4 var(--sans);margin-bottom:19px}
+#site-footer{background:#edf0f5;border-top:3px solid var(--navy);padding-top:38px}
+.footer-brand{font:600 27px/1.5 var(--sans);letter-spacing:.07em}
+.footer-brand .gold{margin-left:3px;color:#b58a22}
+html[lang=ja] .university-brand strong{font-family:var(--sans);font-size:26px;letter-spacing:.035em;line-height:1.5}
+html[lang=ja] h1{font-size:44px;font-weight:600;line-height:1.55}
+html[lang=ja] .hero h1{font-size:45px;line-height:1.55;letter-spacing:.01em}
+html[lang=ja] .hero-intro{font-size:14px;line-height:2}
+html[lang=ja] h2,html[lang=ja] .section-heading h2{font-size:29px;line-height:1.65}
+html[lang=ja] .pathways h2{font-size:14px}
+html[lang=ja] #main-nav a{font-size:12px}
+html[lang=ja] .club-card h3{font-size:22px;font-weight:600;line-height:1.5}
+html[lang=ja] .restaurant-identity h2{font-size:22px;line-height:1.55;font-weight:600}
+html[lang=ja] .story-preview h2,html[lang=ja] .dining-feature h2{font-size:32px;line-height:1.7}
+html[lang=ja] .page-head h1{font-size:40px;line-height:1.55}
+html[lang=ja] .start-banner h2{font-size:25px}
+@media(max-width:1100px){.university-brand strong{font-size:27px}.masthead-caption{font-size:10px;padding-left:20px}.hero-grid{gap:32px}.hero h1{font-size:43px}.hero-art img{height:330px}.hero-intro{font-size:13px}.hero .button{font-size:11px;gap:13px;padding:11px 15px}.club-card-body{padding-inline:20px}.club-card h3{font-size:21px}.dining-feature h2{font-size:38px}html[lang=ja] .university-brand strong{font-size:23px}html[lang=ja] .hero h1{font-size:38px}html[lang=ja] .hero-intro{font-size:13px}.restaurant-heading{padding:24px}.restaurant-content{padding:25px}.story-preview{gap:50px}}
+@media(max-width:850px){html{scroll-padding-top:140px}.utility-inner{font-size:8px}.utility-divider{margin-inline:6px}.masthead{min-height:83px;gap:15px}.university-brand{gap:12px}.university-brand strong{font-size:25px}.university-brand small{font-size:7px;letter-spacing:.12em}.brand-context{font-size:8px}.brand-rule{height:47px;width:4px}.masthead-caption{display:none}.masthead .menu-button{display:inline-flex;order:0;margin-left:auto;border:1px solid var(--line);border-radius:2px;width:43px;height:43px}.nav-band{height:0;border:0}#main-nav{display:none;position:absolute;top:118px;left:0;right:0;height:auto;margin:0;background:var(--navy);padding:10px 30px 18px;box-shadow:0 10px 20px #18205318;z-index:21}#main-nav.open{display:flex;flex-direction:column;align-items:stretch;gap:0}#main-nav a{border:0;border-bottom:1px solid #ffffff25;justify-content:flex-start;padding:13px 12px;font-size:13px}#main-nav a:first-child{border-left:0}#main-nav a[aria-current]{border-left:3px solid var(--gold);background:#ffffff12}.hero-grid{gap:30px;padding-block:35px;grid-template-columns:1fr}.hero h1{font-size:48px;max-width:650px}.hero-art img{height:auto;aspect-ratio:1.8;object-position:center}.hero-intro{max-width:630px;font-size:14px}.hero .button{font-size:13px;padding:12px 20px}.hero .button-row{margin-top:22px}.hero-art figcaption{font-size:8px}.pathways{padding-block:5px}.pathways>a,.pathways>a:first-child,.pathways>a:last-child{padding-block:18px}.section{padding-block:47px}.section-heading h2{font-size:29px}.club-card-image img{aspect-ratio:1.5}.club-card-body{padding:20px}.restaurant-card{grid-template-columns:1fr 1.3fr}.restaurant-heading{padding:22px}.restaurant-identity h2{font-size:22px}.restaurant-content{padding:23px}.dining-feature-grid{gap:40px}.dining-feature h2{font-size:34px}.story-preview h2{font-size:31px}.start-banner h2{font-size:25px}.start-banner{margin-bottom:47px}.page-head h1{font-size:38px}.guide-layout aside h2,.message-builder h2,.faq h2{font-size:28px}.mission-band h2{font-size:33px}html[lang=ja] .university-brand strong{font-size:22px}html[lang=ja] #main-nav a{font-size:13px}html[lang=ja] .hero h1{font-size:40px}html[lang=ja] .section-heading h2{font-size:27px}html[lang=ja] .page-head h1{font-size:35px}}
+@media(max-width:600px){.utility-inner{font-size:7px;letter-spacing:.02em}.utility-divider{margin-inline:5px}.utility-bar .language-switch{font-size:8px;gap:6px}.masthead{min-height:82px;gap:8px}.university-brand{gap:10px}.university-brand strong{font-size:20px;line-height:1.35;letter-spacing:0}.university-brand small{font-size:6px;letter-spacing:.07em;margin-top:4px}.brand-context{font-size:7px;letter-spacing:.04em}.brand-rule{height:44px;width:3px;border-bottom-width:10px}.masthead .menu-button{width:35px;height:37px;flex-shrink:0}.masthead .menu-button .icon{width:19px;height:19px}#main-nav{top:117px;padding:8px 22px 16px}#main-nav a{font-size:12px}.hero-grid{padding-block:29px 25px;gap:25px}.hero h1{font-size:clamp(31px,8.5vw,44px);line-height:1.3;letter-spacing:-.035em}.hero .eyebrow{font-size:8px;margin-bottom:16px;letter-spacing:.09em;gap:8px}.hero .eyebrow:before{width:17px}.hero-intro{font-size:13px;line-height:1.95;margin-top:18px}.hero .button{font-size:11px;padding:11px 13px;min-height:45px;gap:13px}.hero-note{font-size:9px;margin-top:16px}.hero-art img{aspect-ratio:1.55;border-radius:0}.hero-art figcaption{font-size:7px;letter-spacing:.03em;gap:5px}.hero-art figcaption span:last-child{font-size:7px}.section{padding-block:38px}.section-heading{padding-bottom:18px;margin-bottom:23px}.section-heading h2{font-size:26px;line-height:1.5}.section-heading>.text-link{margin-top:12px}.club-grid{gap:22px}.club-card-image img{aspect-ratio:1.5}.club-card-image figcaption{font-size:9px;padding:6px 10px}.club-card-body{padding:20px}.club-card h3{font-size:23px}.club-card-body>.category-caption{font-size:9px;margin-bottom:12px}.club-card-body>p:not(.card-subtitle){font-size:13px}.save-button{width:36px;height:36px}.dining-feature{padding-block:39px}.dining-feature h2{font-size:34px}.dining-feature-copy>p{font-size:14px}.story-preview h2{font-size:29px}.story-preview .lead{font-size:16px}.start-banner{padding:25px;margin-bottom:38px;border-left-width:4px}.start-banner h2{font-size:23px}.page-head{padding-block:30px 27px}.page-head h1{font-size:33px;line-height:1.35}.page-head p:not(.eyebrow){font-size:13px;margin-top:18px}.page-head .eyebrow{font-size:9px;margin-bottom:14px}.restaurant-card{grid-template-columns:1fr}.restaurant-identity{display:block;padding:0}.restaurant-image img{aspect-ratio:1.6}.restaurant-image figcaption{font-size:8px;line-height:1.7;padding:6px 17px}.restaurant-heading{padding:20px 22px 23px}.restaurant-identity h2{font-size:23px;margin:9px 0 7px}.restaurant-heading .eyebrow{font-size:8px;letter-spacing:.04em}.restaurant-identity .card-subtitle{font-size:11px}.restaurant-content{padding:22px;border-top:1px solid var(--line)}.culture-section h2,.phrase-section h2{font-size:27px}.guide-layout aside h2,.message-builder h2,.faq h2{font-size:26px}.mission-band h2{font-size:28px}.dialog-image{margin-bottom:21px}.dialog-image img{aspect-ratio:1.5}.dialog-image figcaption{font-size:9px;padding:7px 10px}dialog h2{font-size:27px}.footer-brand{font-size:25px}html[lang=ja] .university-brand strong{font-size:clamp(15px,4.3vw,21px);letter-spacing:0;line-height:1.5}html[lang=ja] .brand-context{font-size:7px;letter-spacing:.01em}html[lang=ja] .university-brand small{font-size:5.5px;letter-spacing:.02em}html[lang=ja] .hero h1{font-size:clamp(29px,8.3vw,37px);line-height:1.6;letter-spacing:0}html[lang=ja] .hero-intro{font-size:12px;line-height:2}html[lang=ja] .hero .eyebrow{font-size:8px;letter-spacing:.02em}html[lang=ja] .hero .button{font-size:10px;padding:10px 12px;gap:9px}html[lang=ja] .page-head h1{font-size:clamp(24px,7.2vw,32px);line-height:1.6}html[lang=ja] h2,html[lang=ja] .section-heading h2{font-size:25px}html[lang=ja] .pathways h2{font-size:13px}html[lang=ja] .club-card h3{font-size:22px}html[lang=ja] .restaurant-identity h2{font-size:22px}html[lang=ja] .dining-feature h2,html[lang=ja] .story-preview h2{font-size:27px}html[lang=ja] .start-banner h2{font-size:22px}}
+@media print{.utility-bar,.masthead,.nav-band{display:none}.club-card-image img,.restaurant-image img{max-height:200px;object-fit:cover}.dialog-image{display:none}.hero-art{display:none}}
+@media(max-width:360px){.masthead{gap:6px}.university-brand{gap:8px;min-width:0;flex:1}.university-brand strong{font-size:16px}.masthead .menu-button{width:30px;height:34px}.brand-context{font-size:6.5px}.university-brand small{font-size:5px;letter-spacing:.02em}html[lang=ja] .university-brand strong{font-size:12.3px;letter-spacing:0}html[lang=ja] .brand-context{font-size:6px}html[lang=ja] .university-brand small{font-size:4.8px}html[lang=ja] .page-head h1{font-size:21px;line-height:1.7}.hero-art figcaption{font-size:6px}.hero-art figcaption span:last-child{font-size:6px}}

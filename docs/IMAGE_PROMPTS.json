@@ -1,0 +1,89 @@
+[
+  {
+    "id": "wizards",
+    "file": "assets/clubs/wizards.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no text, no watermarks. This will be explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, faces not in close-up, leave comfortable space around important objects. A coeducational group of five adult university cheerleaders in navy and white sports practice clothing holding yellow pom-poms in a bright university gym, standing at ground level in an energetic coordinated pose, friendly inclusive team feeling, no lifts or stunts, candid documentary wide view."
+  },
+  {
+    "id": "photography",
+    "file": "assets/clubs/photography.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no text, no watermarks. This will be explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, faces not in close-up, leave comfortable space around important objects. Three adult university students with different backgrounds taking photographs together on a leafy autumn campus path. One holding a mirrorless camera, another reviewing images beside them; golden ginkgo trees and soft afternoon light. Quiet candid university club outing, not staged stock-photo posing."
+  },
+  {
+    "id": "tea",
+    "file": "assets/clubs/tea.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no text, no watermarks. This will be explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, faces not in close-up, leave comfortable space around important objects. A close documentary view of adult university students learning Japanese Urasenke tea ceremony, seated correctly on tatami, one person whisking matcha in a ceramic bowl, another learning beside them. A simple tea room, navy kimono and modest casual clothing, warm natural light, tea utensils carefully composed."
+  },
+  {
+    "id": "cycling",
+    "file": "assets/clubs/cycling.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no text, no watermarks. This will be explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, faces not in close-up, leave comfortable space around important objects. Four adult university students with road bicycles and properly worn helmets taking a break on a safe paved riverside path in green countryside, relaxed friendship, navy cycling jackets, yellow bike accent, soft blue hills in distance, realistic bicycles and wheels."
+  },
+  {
+    "id": "wind",
+    "file": "assets/clubs/wind.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no readable text, no watermarks. Explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, comfortable framing. A small ensemble of four adult university students rehearsing wind band music in a bright music practice room. Focus on a woman playing clarinet, a man with trumpet and another with flute, conductor slightly out of focus. Instruments correctly held, subtle shared concentration, blurred music sheets without readable text, no logos.",
+    "editPrompt": "Edit this generated concept photograph. Remove only the added navy, white and yellow graphic disclaimer banner and all its overlaid lettering. Seamlessly reconstruct the underlying wall, trees, window or floor. Preserve the people, activity, instruments or equipment, composition, lighting and photographic style exactly. The website already renders an accessible AI-image disclosure as real HTML outside the photograph, so the bitmap must contain absolutely no text, banners, logos or graphic overlays. Do not add any other element."
+  },
+  {
+    "id": "kyudo",
+    "file": "assets/clubs/kyudo.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no readable text, no watermarks. Explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, comfortable framing. Quiet Japanese archery practice in a simple wooden kyudo dojo, adult Japanese university student seen in three-quarter rear view wearing a plain white keikogi and navy hakama, holding a tall asymmetrical Japanese yumi bow at rest between shots, another student observing at a safe distance. No drawn arrow aimed at camera, no dangerous behaviour. Peaceful disciplined composition.",
+    "editPrompt": "Edit this generated concept photograph. Remove only the added navy, white and yellow graphic disclaimer banner and all its overlaid lettering. Seamlessly reconstruct the underlying wall, trees, window or floor. Preserve the people, activity, instruments or equipment, composition, lighting and photographic style exactly. The website already renders an accessible AI-image disclosure as real HTML outside the photograph, so the bitmap must contain absolutely no text, banners, logos or graphic overlays. Do not add any other element."
+  },
+  {
+    "id": "ecolo",
+    "file": "assets/clubs/ecolo.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no readable text, no watermarks. Explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, comfortable framing. Four diverse adult university students doing a campus litter clean-up beside trees and flower beds, wearing work gloves and holding litter tongs and simple unmarked reusable collection bags. Relaxed genuine collaboration, one small yellow jacket accent, wide candid documentary university volunteer photograph.",
+    "editPrompt": "Edit this generated concept photograph. Remove only the added navy, white and yellow graphic disclaimer banner and all its overlaid lettering. Seamlessly reconstruct the underlying wall, trees, window or floor. Preserve the people, activity, instruments or equipment, composition, lighting and photographic style exactly. The website already renders an accessible AI-image disclosure as real HTML outside the photograph, so the bitmap must contain absolutely no text, banners, logos or graphic overlays. Do not add any other element."
+  },
+  {
+    "id": "badminton",
+    "file": "assets/clubs/badminton.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial concept image for a bilingual university club directory. Landscape 3:2, realistic professional university prospectus photography, natural soft daylight, understated navy blue, white and golden yellow accents, calm trustworthy atmosphere, accurate anatomy and equipment. Fictional adult university students and a fictional campus, no identifiable real people or exact real buildings, no branded clothing, no logos, no readable text, no watermarks. Explicitly labelled as an AI-generated illustrative image, not an actual club photo. Compose a clear subject readable in a 16:10 thumbnail, comfortable framing. Two adult university students playing a friendly badminton doubles practice with two teammates in a bright indoor university gym. Clear badminton net and rackets, navy and white plain sportswear, subtle yellow shuttle basket at the side, natural motion captured crisply, no brand logos. Court lines and net physically plausible."
+  },
+  {
+    "id": "shah-arena",
+    "file": "assets/dining/shah-arena.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial illustrative food image for a university student food-culture guide. Landscape 3:2, professional tasteful food photography, soft natural window light, neutral ivory ceramics, navy fabric and subtle golden yellow accents, beautiful realistic ingredients and appetising food, restrained university prospectus aesthetic. No logos, labels, certificates, store signage, readable text or watermarks. This is a generic illustrative image, not an actual menu photograph, and will be clearly labelled as AI-generated. Never depict a real restaurant interior or real branded product. An inviting shared catering meal concept: basmati rice, chickpea curry, grilled vegetables, flatbread and a salad in reusable unbranded takeaway containers on a clean wooden table. A few whole spices and fresh herbs nearby, no meat certification claim, no shop interior, no packaging text. Warm overhead three-quarter composition."
+  },
+  {
+    "id": "aobaba",
+    "file": "assets/dining/aobaba.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial illustrative food image for a university student food-culture guide. Landscape 3:2, professional tasteful food photography, soft natural window light, neutral ivory ceramics, navy fabric and subtle golden yellow accents, beautiful realistic ingredients and appetising food, restrained university prospectus aesthetic. No logos, labels, certificates, store signage, readable text or watermarks. This is a generic illustrative image, not an actual menu photograph, and will be clearly labelled as AI-generated. Never depict a real restaurant interior or real branded product. Vietnamese street food concept: a steaming bowl of pho rice noodles in clear broth with fresh herbs, bean sprouts, lime wedges and a small portion of sliced chicken, a simple pair of wooden chopsticks resting on a ceramic holder, a second small side dish of fresh vegetables. Candid high-quality lunch photography at a neutral table, no real stall depiction."
+  },
+  {
+    "id": "muscat",
+    "file": "assets/dining/muscat.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial illustrative food image for a university student food-culture guide. Landscape 3:2, professional tasteful food photography, soft natural window light, neutral ivory ceramics, navy fabric and subtle golden yellow accents, beautiful realistic ingredients and appetising food, restrained university prospectus aesthetic. No logos, labels, certificates, store signage, readable text or watermarks. This is a generic illustrative image, not an actual menu photograph, and will be clearly labelled as AI-generated. Never depict a real restaurant interior or real branded product. Japanese university cafeteria meal concept on a dark navy tray: a bowl of rice, soup, a small tofu dish, leafy greens, and assorted vegetables, a glass of water. Bright simple cafeteria-like table with softly blurred plain chairs, no real campus interior, no claim that the meal is vegan or halal, no labels. Calm close three-quarter composition."
+  },
+  {
+    "id": "peach",
+    "file": "assets/dining/peach.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial illustrative food image for a university student food-culture guide. Landscape 3:2, professional tasteful food photography, soft natural window light, neutral ivory ceramics, navy fabric and subtle golden yellow accents, beautiful realistic ingredients and appetising food, restrained university prospectus aesthetic. No logos, labels, certificates, store signage, readable text or watermarks. This is a generic illustrative image, not an actual menu photograph, and will be clearly labelled as AI-generated. Never depict a real restaurant interior or real branded product. Entirely plant-based cafe food concept: a colourful grain bowl with grilled seasonal vegetables, chickpeas, avocado and a small golden soy-based croquette, side salad, dark ceramic bowl, natural wooden table. All visible ingredients are plants, no eggs, dairy, honey or animal products. Refined fresh casual cafe presentation, no actual restaurant menu claim."
+  },
+  {
+    "id": "salt",
+    "file": "assets/dining/salt.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial illustrative food image for a university student food-culture guide. Landscape 3:2, professional tasteful food photography, soft natural window light, neutral ivory ceramics, navy fabric and subtle golden yellow accents, beautiful realistic ingredients and appetising food, restrained university prospectus aesthetic. No logos, labels, certificates, store signage, readable text or watermarks. This is a generic illustrative image, not an actual menu photograph, and will be clearly labelled as AI-generated. Never depict a real restaurant interior or real branded product. Seasonal Japanese vegetable lunch concept: brown rice in a handmade ceramic bowl, a crisp golden kuruma-fu wheat-gluten cutlet, five small vegetable side dishes including roasted pumpkin, leafy greens, pickles and carrots, tea in a simple cup. Thoughtful seasonal plating with ivory and indigo ceramics on a wooden table, not a photograph of a real restaurant dish."
+  },
+  {
+    "id": "campus-life",
+    "file": "assets/campus-life.webp",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: photorealistic-natural. Asset type: main hero editorial concept photograph for a Japanese university club and cultural exchange guide. Wide landscape 3:2. Six fictional adult university students from varied Japanese and international backgrounds walking and talking naturally on a spacious green campus avenue under golden ginkgo leaves, carrying a badminton racket bag, a camera and a simple tote, friendly relaxed everyday campus life. One woman wears a modest headscarf. Refined realistic university prospectus photography, gentle late afternoon sunlight, understated navy clothing, white and a few yellow accents. Balanced clean horizontal framing with people in the middle third, realistic anatomy, subtle out-of-focus institutional building with no identifying details. No real campus replica, no university crest, no logos, no brands, no readable text, no watermarks. The image will be clearly labelled AI-generated, fictional student-life image."
+  }
+]

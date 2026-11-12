@@ -14,6 +14,76 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./university.css">
   <script type="module" src="./app.js"></script>
+  <script type="module">
+  // Magic sparkles intro — "あなたの一歩を応援したい✨"
+  // WIZARDS spreads smiles; this playful moment echoes that.
+  (function () {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+    const overlay = document.createElement('div');
+    overlay.className = 'magic-intro';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML = '<span class="magic-intro-text">あなたの一歩を<br>応援したい ✨</span>';
+    document.body.prepend(overlay);
+    const sparkleCount = 48;
+    const glyphs = ['✦', '✧', '⋆', '＋', '·'];
+    for (let i = 0; i < sparkleCount; i++) {
+      const s = document.createElement('span');
+      s.className = 'magic-sparkle';
+      s.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+      const size = 10 + Math.random() * 22;
+      s.style.setProperty('--s', size + 'px');
+      s.style.setProperty('--x', (Math.random() * 100) + '%');
+      s.style.setProperty('--y', (Math.random() * 100) + '%');
+      s.style.setProperty('--d', (0.6 + Math.random() * 1.4) + 's');
+      s.style.setProperty('--dl', (Math.random() * 0.5) + 's');
+      s.style.setProperty('--r', (Math.random() * 360) + 'deg');
+      s.style.setProperty('--o', (0.5 + Math.random() * 0.5));
+      overlay.appendChild(s);
+    }
+    const sweep = document.createElement('span');
+    sweep.className = 'magic-sweep';
+    overlay.appendChild(sweep);
+    setTimeout(() => { overlay.classList.add('done'); }, 2200);
+    setTimeout(() => { overlay.remove(); }, 3000);
+  })();
+  </script>
+  <script type="module">
+  // Magic sparkles intro — "We want to cheer on you, who are taking on the challenge."
+  // WIZARDS sets "spreading smiles" as its goal; this playful moment echoes that.
+  (function () {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+    const overlay = document.createElement('div');
+    overlay.className = 'magic-intro';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML = '<span class="magic-intro-text">挑戦するあなたを<br>応援したい</span>';
+    document.body.prepend(overlay);
+    const sparkleCount = 42;
+    const glyphs = ['✦', '✧', '⋆', '＋', '·'];
+    for (let i = 0; i < sparkleCount; i++) {
+      const s = document.createElement('span');
+      s.className = 'magic-sparkle';
+      s.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+      const size = 10 + Math.random() * 22;
+      s.style.setProperty('--s', size + 'px');
+      s.style.setProperty('--x', (Math.random() * 100) + '%');
+      s.style.setProperty('--y', (Math.random() * 100) + '%');
+      s.style.setProperty('--d', (0.6 + Math.random() * 1.4) + 's');
+      s.style.setProperty('--dl', (Math.random() * 0.5) + 's');
+      s.style.setProperty('--r', (Math.random() * 360) + 'deg');
+      s.style.setProperty('--o', (0.5 + Math.random() * 0.5));
+      overlay.appendChild(s);
+    }
+    // shimmer sweep
+    const sweep = document.createElement('span');
+    sweep.className = 'magic-sweep';
+    overlay.appendChild(sweep);
+    // remove after animation
+    setTimeout(() => { overlay.classList.add('done'); }, 2200);
+    setTimeout(() => { overlay.remove(); }, 3000);
+  })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content / 本文へ</a>

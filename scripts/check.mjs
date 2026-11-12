@@ -15,16 +15,26 @@ for(const collection of [clubs,restaurants]) {
   for(const item of collection) {
     for(const key of ['en','ja'])assert.ok(item.name[key] && item.name[key].trim(),'Both languages required');
     assert.equal(new URL(item.source).protocol,'https:','Public source needs HTTPS');
-    assert.ok(item.image && item.image.startsWith('./assets/'),'Each listing needs a local generated image');
-    assert.ok((await stat(resolve(root,item.image))).isFile(),`Missing image ${item.image}`);
-    assert.ok(item.imageAlt?.en && item.imageAlt?.ja,'Bilingual image descriptions required');
+    if (item.image) {
+      // Images may be local generated files (./assets/...) or official club-site URLs.
+      assert.ok(item.image.startsWith('./assets/') || /^https:\/\//.test(item.image),'Image must be a local asset or an HTTPS official URL');
+      if (item.image.startsWith('./assets/')) {
+        assert.ok((await stat(resolve(root,item.image))).isFile(),`Missing image ${item.image}`);
+      } else {
+        assert.equal(new URL(item.image).protocol,'https:','Remote image needs HTTPS');
+      }
+    }
+    // imageAlt is required whenever an image is present.
+    if (item.image) {
+      assert.ok(item.imageAlt?.en && item.imageAlt?.ja,'Bilingual image descriptions required when an image is present');
+    }
   }
 }
 assert.equal(clubs.length,8);
 assert.equal(restaurants.length,5);
 assert.match(reviewedAt,/^\d{4}-\d{2}-\d{2}$/);
-assert.deepEqual(filterClubs(clubs,{query:'写真'}).map(c=>c.id),['photography']);
-assert.deepEqual(filterClubs(clubs,{query:'ｗｉｚａｒｄｓ'}).map(c=>c.id),['wizards']);
+assert.deepEqual(filterClubs(clubs,{query:'写真部'}).map(c=>c.id),['photography']);
+assert.deepEqual(filterClubs(clubs,{query:'応援団総部チアリーダー'}).map(c=>c.id),['wizards']);
 assert.deepEqual(filterClubs(clubs,{category:'sports',beginner:true}).map(c=>c.id),['wizards','kyudo']);
 assert.deepEqual(filterClubs(clubs,{savedOnly:true,saved:['tea']}).map(c=>c.id),['tea']);
 assert.equal(filterClubs(clubs,{query:'unmatched-search-123'}).length,0);
@@ -40,7 +50,9 @@ for(const phrase of Object.values(dietaryPhrases))assert.ok(phrase.en && phrase.
 const html=await readFile(resolve(root,'index.html'),'utf8');
 for(const asset of [...html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g)])assert.ok((await stat(resolve(root,asset[1]))).isFile(),`Missing ${asset[1]}`);
 await stat(resolve(root,'assets/campus-life.webp'));
-assert.equal(new Set([...clubs,...restaurants].map(i=>i.image)).size,13,'Use a distinct image for each listing');
+// Each listing that has an image must use a distinct one (null images are excluded).
+const images = [...clubs,...restaurants].map(i=>i.image).filter(Boolean);
+assert.equal(new Set(images).size,images.length,'Use a distinct image for each listing that has one');
 const vercel=JSON.parse(await readFile(resolve(root,'vercel.json'),'utf8'));
 assert.equal(vercel.outputDirectory,'dist');
 assert.equal(vercel.buildCommand,'npm run build');

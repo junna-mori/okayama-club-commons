@@ -82,53 +82,43 @@ export const clubs = [
 
 export const restaurants = [
   {
-    id: 'shah-arena', image: './assets/dining/shah-arena.webp', imageAlt: { en: "AI-generated example of a catering meal with rice, curry, vegetables and flatbread; not an actual menu.", ja: "ライスやカレー、野菜、パンを組み合わせたケータリングのAI生成イメージ。実際の商品ではありません。" }, area: 'tsushima', diets: ['halal'], type: 'takeaway', icon: 'bag',
-    name: { en: 'Shah Arena', ja: 'Shah Arena（シャーアリーナ）' },
-    cuisine: { en: 'Halal groceries & catering', ja: 'ハラール食材・ケータリング' },
-    description: { en: 'The local tourism guide lists halal-certified grocery products and catering. An option to ask about when planning a shared meal on campus.', ja: '地域の観光案内で、ハラール認証商品の販売とケータリングが紹介されています。学内で一緒に食べる際の相談先の候補です。' },
-    note: { en: 'This is a shop/catering service, not a confirmed dine-in restaurant. Confirm order deadlines, delivery, ingredients and certification for the specific product or meal.', ja: '店内飲食を確認したレストランではなく、販売・ケータリングの候補です。注文期限、配達、料理ごとの原材料や認証を確認してください。' },
-    address: { en: '4-19-16 Tsushima Higashi, Kita-ku, Okayama', ja: '岡山市北区津島東4-19-16' },
-    evidence: { en: 'Halal products / catering listed by local tourism guide', ja: '地域観光案内にハラール商品・ケータリングの記載' },
-    source: 'https://okayamahealthtourism.com/food/okayama-city/shah-arena/', sourceLabel: { en: 'Local tourism listing', ja: '地域観光案内' }, phone: '086-250-3292'
-  },
-  {
-    id: 'aobaba', image: './assets/dining/aobaba.webp', imageAlt: { en: "AI-generated example of Vietnamese pho with herbs and lime; not an actual restaurant dish.", ja: "ハーブやライムを添えたベトナムのフォーのAI生成イメージ。実際の提供料理ではありません。" }, area: 'tsushima', diets: [], type: 'takeaway', icon: 'bowl',
+    id: 'aobaba', image: null, imageAlt: null, area: 'tsushima', diets: [], type: 'takeaway', icon: 'bowl',
     name: { en: 'AoBaba · Okayama University', ja: 'アオババ 岡山大学店' },
     cuisine: { en: 'Vietnamese street food', ja: 'ベトナムの屋台料理' },
-    description: { en: 'The operator lists a campus food stall near L-café. A place to explore Vietnamese food culture together; stall dates are irregular.', ja: '運営会社がL-café付近の学内屋台として案内しています。ベトナムの食文化に触れる候補ですが、出店日は不定期です。' },
+    description: { en: 'A Vietnamese food stall that opened in front of Okayama University Tsushima campus in summer 2018. Enjoy pho, bun bo Hue, bun cha and more at the stall for just 500 yen. The spicy Vietnamese chicken rice grilled on the hot plate right in front is also hugely popular! Hearty Vietnamese set meals are also available to take away or eat on the spot. Open irregularly, but generally on Mondays and Thursdays (except university holidays) from around 11:00 to 14:00, in the plaza between Seven-Eleven and L-café.', ja: '岡山大学の前でベトナム屋台！本場の味を屋台で味わってください！岡山大学津島キャンパスに2018年夏、ベトナム屋台がOPEN！フォーやブンボーフエ、ブンチャーなど屋台で低価格500円で楽しめます。目の前の鉄板で焼きスパイシーな香りが漂うベトナムチキンライスも大人気！ボリューム満点のベトナム弁当もいろいろおかずが替わり、テイクアウトやその場で食べてもOK！不定期ですが、大学の休み期間以外は、月木曜日に営業しています。11:00〜14:00頃まで、セブンイレブンさんとL-caféさんの間の広場でのんびりと営業しています。' },
     note: { en: 'Vegan and halal options are not confirmed. Broth, fish sauce, meat and cooking methods need checking. Confirm the next stall date before going.', ja: 'ビーガン・ハラール対応は未確認です。だし、魚醤、肉類、調理方法を確認してください。次の出店日も事前に確認しましょう。' },
-    address: { en: '1-1-1 Tsushima Naka, Kita-ku, Okayama · campus stall', ja: '岡山市北区津島中1-1-1・学内屋台' },
+    address: { en: '1-1-1 Tsushima Naka, Kita-ku, Okayama · campus stall', ja: '岡山県岡山市北区津島中1丁目1番1号' },
     evidence: { en: 'Official operator page · dietary options unconfirmed', ja: '運営会社の店舗ページ・食事対応は未確認' },
     source: 'https://www.aobaba.jp/okayama_u', sourceLabel: { en: 'Official shop information', ja: '公式店舗情報' }, phone: '090-6149-9072'
   },
   {
-    id: 'muscat', image: './assets/dining/muscat.webp', imageAlt: { en: "AI-generated example of a cafeteria meal tray; not an actual menu.", ja: "ごはんや小鉢を載せた食堂のトレーのAI生成イメージ。実際の提供メニューではありません。" }, area: 'tsushima', diets: [], type: 'dinein', icon: 'table',
-    name: { en: 'Muscat Cafeteria', ja: 'マスカットカフェテリア' },
-    cuisine: { en: 'Campus cafeteria', ja: '学内の生協食堂' },
-    description: { en: 'A university co-op cafeteria on Tsushima campus. Check the daily menu and ingredient information with staff before choosing a meal.', ja: '津島キャンパスにある生協食堂です。その日のメニューや原材料について、料理を選ぶ前にスタッフへ確認しましょう。' },
-    note: { en: 'No standing vegan or halal meal service was confirmed in the sources reviewed. Do not assume a vegetable-looking dish has no animal ingredients or broth.', ja: '確認した情報では、常設のビーガン・ハラール料理の提供を確認できませんでした。野菜中心に見える料理でも、だしなどの原材料を確認してください。' },
-    address: { en: 'Muscat Union, Tsushima campus, Okayama University', ja: '岡山大学津島キャンパス・マスカットユニオン' },
-    evidence: { en: 'University facilities information · dietary options unconfirmed', ja: '大学の施設案内・食事対応は未確認' },
-    source: sources.facilities, extraSource: 'https://www.univcoop.or.jp/cooperation/cooperation_525.html', sourceLabel: { en: 'University facilities information', ja: '大学の施設案内' }, phone: null
+    id: 'milenga', image: null, imageAlt: null, area: 'city', diets: ['halal'], type: 'dinein', icon: 'bowl',
+    name: { en: 'Milenga', ja: 'ミレンガ' },
+    cuisine: { en: 'Halal Indian home-style cuisine', ja: 'ハラール・インド家庭料理' },
+    description: { en: "'Milenga' means 'Let's meet' in Hindi. This is the only restaurant in Okayama certified by the Halal Certificate Institute in India. Authentic Indian home-style food is made by international staff representing seven countries. All dishes are handmade with fresh vegetables, meats, and authentic spices. Both vegetarian and non-vegetarian meals are available at reasonable prices. A prayer room is also available. Recommended dish: Daily Thali + Chai tea.", ja: '「ミレンガ」はヒンディ语で「出会いましょう」を意味します。インドのハラール認証機構（Halal Certificate Institute India）の認証を受ける岡山で唯一のレストランです。7か国の国際スタッフが本場のインド家庭料理を手作りしています。新鮮な野菜・肉・本格スパイスで、ビーガン・非ビーガン料理ともお手頃価格で提供しています。礼拝室も完備。おすすめ：デイリータリー+チャイティー' },
+    note: { en: 'Operating hours: Mon-Sat 11:30-20:20, Sun/holidays 11:30-17:20. Please confirm current operating status before visiting. Seating for large and small groups as well as individuals is available.', ja: '営業時間：月〜土 11:30〜20:20、日・祝 11:30〜17:20。訪問前に最新の営業状況を確認してください。大人数から個人まで席が利用できます。' },
+    address: { en: 'Oka Bldg. 1F, 1-3-3 Nodaya-cho, Kita-ku, Okayama City', ja: '岡山市北区野田町1-3-3 オカビル1F' },
+    evidence: { en: 'Halal certification listed by local tourism guide', ja: '地域観光案内にハラール認証の記載' },
+    source: 'https://okayamahealthtourism.com/food/okayama-city/milenga/', sourceLabel: { en: 'Local tourism listing', ja: '地域観光案内' }, phone: '086-206-2289'
   },
   {
-    id: 'peach', image: './assets/dining/peach.webp', imageAlt: { en: "AI-generated example of a plant-based grain and vegetable bowl; not an actual restaurant dish.", ja: "野菜や穀物を使ったプラントベース料理のAI生成イメージ。実際の提供料理ではありません。" }, area: 'city', diets: ['vegan'], type: 'dinein', icon: 'leaf',
-    name: { en: 'Plant-Based Cafe PEACH', ja: 'Plant-Based Cafe PEACH' },
-    cuisine: { en: '100% plant-based · reservation only', ja: '植物性100%の料理・完全予約制' },
-    description: { en: 'The official site states that its food uses no meat, fish, eggs, dairy or honey. Service is irregular and by advance reservation only.', ja: '公式サイトで、肉・魚・卵・乳製品・はちみつを使わない料理と案内されています。不定期営業・完全予約制です。' },
-    note: { en: 'Book before visiting and check current availability. Vegan food does not by itself establish halal status or allergen suitability; ask about your individual needs.', ja: '来店前の予約と営業確認が必要です。ビーガン料理でも、ハラールやアレルギーへの適合を意味するわけではありません。個別の希望を相談してください。' },
-    address: { en: 'K&K Omotecho Building 1F, 3-20-7 Omotecho, Kita-ku, Okayama', ja: '岡山市北区表町3-20-7 K&K表町ビル1F' },
-    evidence: { en: 'Plant-based ingredients stated on the official site', ja: '公式サイトに植物性100%の原材料方針を記載' },
-    source: 'https://cafe-peach.com/', sourceLabel: { en: 'Official website / reservations', ja: '公式サイト・予約案内' }, phone: null
+    id: 'restoran-halal', image: null, imageAlt: null, area: 'city', diets: ['halal'], type: 'dinein', icon: 'bowl',
+    name: { en: 'Restoran Halal', ja: 'レストランハラール' },
+    cuisine: { en: 'Halal restaurant', ja: 'ハラール料理' },
+    description: { en: 'A halal restaurant in Okayama. Please contact the restaurant directly for current menu, hours and reservation information.', ja: '岡山にあるハラールレストランです。現在のメニュー・営業時間・予約については、直接店舗へお問い合わせください。' },
+    note: { en: 'Dietary details and group seating need confirmation. Please contact the restaurant before visiting.', ja: '食事対応の詳細やグループの席は要確認です。訪問前に店舗へお問い合わせください。' },
+    address: { en: 'Kita-ku, Okayama City (please confirm with the restaurant)', ja: '岡山市北区（店舗へ要確認）' },
+    evidence: { en: 'Listed as a halal dining option', ja: 'ハラール Dining の候補として掲載' },
+    source: 'https://maps.app.goo.gl/exk8Ld43sY9u7RjY8', sourceLabel: { en: 'Google Maps', ja: 'Googleマップ' }, phone: null
   },
   {
-    id: 'salt', image: './assets/dining/salt.webp', imageAlt: { en: "AI-generated example of a Japanese seasonal vegetable meal; not an actual restaurant dish.", ja: "玄米や季節の野菜を使った和食のAI生成イメージ。実際の提供料理ではありません。" }, area: 'city', diets: ['vegan'], type: 'dinein', icon: 'bowl',
-    name: { en: 'SALT · Ishikawa Shokudo', ja: 'SALT－石川食堂' },
-    cuisine: { en: 'Seasonal Japanese meals · ask about vegan options', ja: '季節の和食・ビーガン料理は要相談' },
-    description: { en: 'The local tourism guide lists vegan options. The restaurant’s own menu also includes fish, so discuss a suitable meal in advance.', ja: '地域の観光案内にはビーガン料理の記載があります。店舗公式メニューには魚料理もあるため、希望する料理を事前に相談してください。' },
-    note: { en: 'Ask specifically about broth, egg, dairy, seasonings and shared preparation. Availability and group seating need advance confirmation; this is not an all-vegan restaurant.', ja: 'だし、卵、乳製品、調味料、調理器具の共用を具体的に確認しましょう。提供可否とグループの席は要相談です。全品ビーガンのお店ではありません。' },
-    address: { en: '2-12-14 Marunouchi, Kita-ku, Okayama', ja: '岡山市北区丸の内2-12-14' },
-    evidence: { en: 'Vegan option listed by local tourism guide · confirm in advance', ja: '地域観光案内にビーガン料理の記載・事前確認が必要' },
-    source: 'https://salt-ishikawa.com/', extraSource: 'https://okayamahealthtourism.com/food/okayama-city/salt-ishikawa-shokudo/', sourceLabel: { en: 'Official restaurant website', ja: '店舗公式サイト' }, phone: '086-238-9910'
+    id: 'rakuda-kitchen', image: null, imageAlt: null, area: 'city', diets: [], type: 'dinein', icon: 'bowl',
+    name: { en: 'Rakuda no Kitchen', ja: 'ラクダのキッチン' },
+    cuisine: { en: 'Restaurant', ja: 'レストラン' },
+    description: { en: 'A restaurant in Okayama. Please contact the restaurant directly for current menu, hours and reservation information.', ja: '岡山にあるレストランです。現在のメニュー・営業時間・予約については、直接店舗へお問い合わせください。' },
+    note: { en: 'Dietary details and group seating need confirmation. Please contact the restaurant before visiting.', ja: '食事対応の詳細やグループの席は要確認です。訪問前に店舗へお問い合わせください。' },
+    address: { en: 'Okayama City (please confirm with the restaurant)', ja: '岡山市（店舗へ要確認）' },
+    evidence: { en: 'Listed as a dining option', ja: '食事の候補として掲載' },
+    source: 'https://maps.app.goo.gl/HRSKioG3Grnr5zVDA', sourceLabel: { en: 'Google Maps', ja: 'Googleマップ' }, phone: null
   }
 ];

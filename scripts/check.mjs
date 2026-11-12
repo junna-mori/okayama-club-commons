@@ -31,17 +31,16 @@ for(const collection of [clubs,restaurants]) {
   }
 }
 assert.equal(clubs.length,8);
-assert.equal(restaurants.length,5);
+assert.equal(restaurants.length,4);
 assert.match(reviewedAt,/^\d{4}-\d{2}-\d{2}$/);
 assert.deepEqual(filterClubs(clubs,{query:'写真部'}).map(c=>c.id),['photography']);
 assert.deepEqual(filterClubs(clubs,{query:'応援団総部チアリーダー'}).map(c=>c.id),['wizards']);
 assert.deepEqual(filterClubs(clubs,{category:'sports',beginner:true}).map(c=>c.id),['wizards','kyudo']);
 assert.deepEqual(filterClubs(clubs,{savedOnly:true,saved:['tea']}).map(c=>c.id),['tea']);
 assert.equal(filterClubs(clubs,{query:'unmatched-search-123'}).length,0);
-assert.deepEqual(filterRestaurants(restaurants,{area:'tsushima',diet:'vegan'}),[],'Unconfirmed venues must not appear under vegan');
-assert.deepEqual(filterRestaurants(restaurants,{diet:'halal'}).map(r=>r.id),['shah-arena']);
-assert.deepEqual(filterRestaurants(restaurants,{area:'city',diet:'vegan'}).map(r=>r.id),['peach','salt']);
-assert.deepEqual(filterRestaurants(restaurants,{diet:'unconfirmed'}).map(r=>r.id),['aobaba','muscat']);
+assert.deepEqual(filterRestaurants(restaurants,{diet:'halal'}).map(r=>r.id).sort(),['milenga','restoran-halal']);
+assert.deepEqual(filterRestaurants(restaurants,{diet:'unconfirmed'}).map(r=>r.id).sort(),['aobaba','rakuda-kitchen']);
+assert.equal(filterRestaurants(restaurants,{diet:'vegan'}).length,0,'No vegan-confirmed venues currently');
 const msg=buildClubMessage({name:'Alex <sample>',club:'WIZARDS',period:'Apr–Sep 2027',japanese:'beginner'});
 for(const language of ['en','ja']) {assert.ok(msg[language].includes('Alex <sample>'));assert.ok(msg[language].includes('Apr–Sep 2027'));assert.ok(msg[language].includes('WIZARDS'));}
 assert.ok(buildClubMessage().en.includes('[your name]'));

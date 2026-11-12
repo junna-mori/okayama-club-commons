@@ -8,5 +8,5 @@ await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
 for (const name of ['index.html','styles.css','university.css','app.js','data.js','domain.js','assets','robots.txt']) await cp(resolve(root,name), resolve(out,name),{recursive:true});
 const html = await readFile(resolve(out,'index.html'),'utf8');
-if (!html.includes('COMMONS')) throw new Error('Missing entry point');
+if (!html.includes('岡山大学へようこそ') && !html.includes('Welcome to Okayama University')) throw new Error('Missing entry point');
 console.log('Built static website in dist/ (no third-party dependencies).');
